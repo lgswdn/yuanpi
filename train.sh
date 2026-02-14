@@ -1,0 +1,1 @@
+bash ~/IsaacLab/isaaclab.sh -p scripts/train.py --task=Isaac-nonPrehensile-Franka-v0 --experiment_name=franka_nonprehensile --num_envs=1024 --headless
