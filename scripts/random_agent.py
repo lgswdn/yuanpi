@@ -8,6 +8,12 @@
 """Launch Isaac Sim Simulator first."""
 
 import argparse
+import logging
+import os
+
+# Set custom temp directory before importing Isaac Lab to avoid permission issues
+os.environ['TMPDIR'] = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "logs", "tmp")
+os.makedirs(os.environ['TMPDIR'], exist_ok=True)
 
 from isaaclab.app import AppLauncher
 
